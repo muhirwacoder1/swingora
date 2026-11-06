@@ -1,0 +1,7 @@
+{
+  "name": "swingora-recreation",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Faithful static recreation of the Swingora golf website",
+  "scripts": { "dev": "python3 -m http.server 5195 --bind 127.0.0.1 --directory dist", "check": "python3 verify.py" }
+}
