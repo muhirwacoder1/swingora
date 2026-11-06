@@ -80,6 +80,7 @@ for route,s in pages.items():
  s=re.sub(r'<script\b[^>]*>\s*window\.__WF_REVIEW_BRIDGE.*?</script>','',s,flags=re.S)
  s=re.sub(r'<script\b[^>]*src=[\"\'][^\"\']*validation-worker[^>]*>.*?</script>','',s,flags=re.S)
  s=s.replace('data-wf-domain="swingora.webflow.io"','data-wf-domain="swingora-recreation.muhirwa250.chatgpt.site"')
+ s=re.sub(r'\s+data-wf-status="[^"]*"','',s)
  for src,dst in sorted(local.items(),key=lambda x:-len(x[0])):s=s.replace(src,dst)
  s=s.replace(ORIGIN+'/', '/')
  # Remove integrity hashes because localized CSS paths are rewritten.
